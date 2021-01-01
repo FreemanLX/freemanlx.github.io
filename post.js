@@ -39,5 +39,3 @@ transporter.sendMail(mailOptions, function(error, info){
 });
 
 });
-
-app.listen(8030, function() {console.log('serverul asculta pe portul 8030')});
