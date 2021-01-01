@@ -4,6 +4,23 @@ function round_type(ex){
 	return ex;
 }
 
+function verify(){
+	var x = document.forms["form_t"];
+	for(i = 0; i<x.length; i++){
+		if(x[i].value == ""){
+		    alert("Something isn't filled or you didn't checked the agreement of data collection.");
+		    return false;
+		}
+	}
+	var t = document.form["form_t"]["condition"].value;
+	if(t == ""){
+        alert("Something isn't filled or you didn't checked the agreement of data collection.");
+		return false;
+	}
+	
+	return true;
+}
+
 function generate_animation(element){
 	var elem = document.getElementById(element);
     elem.style.animationName="fadeIn";
@@ -22,40 +39,56 @@ function lambda_type(){
 		inner.innerHTML = "Date: 	" + m + "/" + d + "/" + y + "   	Time: " + h + ":" + min + ":" + s;
 }
 
+
+let menus = ["work", "home", "education", "projects", "about", "contact"]; ///main menus
+
 function update(){ 
    setInterval(lambda_type,1000);
 }
-			  
+		
+function hide(element){
+	document.getElementById(element).style.display = "none";
+}		
+
+function show(element){
+	document.getElementById(element).style.display = "block";
+}
+
+function if_is_hidden(element){
+	if(document.getElementById(element).style.display == "block")
+		  return 0; 
+	return 1;
+}
+
+function moving_to(element){
+	generate_animation(element);
+	for(i = 0; i<menus.length; i++){
+	     if(if_is_hidden(menus[i]) == 0){
+			  hide(menus[i]);
+		 }
+			 
+	}
+	if(element != "home"){
+		hide("home");
+		hide("data");
+	}
+	show(element);
+}			
 			  
 function hide_wexp(){
-	    generate_animation("work");
-        document.getElementById("work").style.display = "block";
-        document.getElementById("home").style.display = "none"; 
-        document.getElementById("education").style.display = "none"; 
-        document.getElementById("projects").style.display = "none"; 
-        document.getElementById("about").style.display="none";
-		document.getElementById("data").style.display="none";
+	    moving_to("work");
 }
 
 function hide_edexp(){
-	    generate_animation("education");
-        document.getElementById("education").style.display = "block";
-        document.getElementById("home").style.display = "none"; 
-        document.getElementById("work").style.display = "none"; 
-        document.getElementById("projects").style.display = "none"; 
-        document.getElementById("about").style.display="none";
-		document.getElementById("data").style.display="none";
-   
+	    moving_to("education");
 }
 
 function hide_myprojects(){
-	    generate_animation("projects");
-        document.getElementById("projects").style.display = "block"; 
-        document.getElementById("home").style.display = "none"; 
-        document.getElementById("education").style.display = "none"; 
-        document.getElementById("work").style.display = "none"; 
-        document.getElementById("about").style.display="none";
-		document.getElementById("data").style.display="none";
+	    moving_to("projects");
+}
+
+function contact_form(){
+	    moving_to("contact");
 }
 
 function listen(s){
@@ -65,37 +98,15 @@ function listen(s){
 		else{
 			document.getElementById("data").style.display="none";
 		}
-	
 }
 
 function hide_home(){
-	    generate_animation("home");
-        document.getElementById("home").style.display = "block";
-        document.getElementById("work").style.display = "none"; 
-        document.getElementById("education").style.display = "none"; 
-        document.getElementById("projects").style.display = "none"; 
-		document.getElementById("about").style.display="none";
+	    moving_to("home");
 		var s = window.matchMedia("(min-width: 1280px) and (min-height: 900px)");
 		listen(s);
 		s.addListener(listen);
 }
    
 function about(){
-	    generate_animation("about");
-        document.getElementById("home").style.display = "none";
-        document.getElementById("work").style.display = "none"; 
-        document.getElementById("education").style.display = "none"; 
-        document.getElementById("projects").style.display = "none"; 
-        document.getElementById("about").style.display = "block";
-        document.getElementById("data").style.display="none";			
-}
-   
-   
-function remove_popup(){
-        //document.getElementById("popup").style.display="none";
-        document.getElementById("home").style.display="block";
-		document.getElementById("navbar_p").style.display="block";
-        var remove = document.getElementById("popup");
-		var parent = document.getElementById("corp");
-		parent.removeChild(remove);
+	    moving_to("about");		
 }

@@ -23,6 +23,9 @@
   <div class = "subnav">
        <button class="subnavbutton" onclick="about();">About</button>
   </div>
+  <div class = "subnav">
+	   <button class="subnavbutton" onclick="contact_form();">Contact</button>
+  </div>
   <div class = "subnav">   
 	  <button class="subnavbutton">My CV <i class="fa fa-caret-down"></i></button>
 	   <div class = "subnav-content">
@@ -213,19 +216,19 @@
 		   <p><b>July 2020 - October 2020</b></p>
 		   <p><b>My activity:</b></p>
 		   <ul class = "align">
-			<li> -> Installed and configured new hardware and software to some computers. </li>
-			<li> -> Answered technical queries and assisted users. </li>
-			<li> -> Ensured that the network infrastructure is up and running. </li>
-			<li> -> Maintained the email server (euromedics.ro), updated the emails password every month, added or removed some emails if it was necessary. </li>
-			<li> -> Monitored and maintained updated virus protection software, and backup data for emergency recovery and installed Bitdefender up to 20 device (included mobile). </li>
-			<li> -> Updated every month, the server password. </li>
-			<li> -> Mainteined the door system (software) using ZKTeco Access System, and reported the situation of the hardware. </li>
-			<li> -> Mainteined the CCTY system (software) using Dahua Smart PSS. </li>
-			<li> -> Mainteined and checked the server utilization. </li>
-			<li> -> Checked every day the telephone exchange and solved small problems if it was. </li>
+			<li> Installed and configured new hardware and software to some computers. </li>
+			<li> Answered technical queries and assisted users. </li>
+			<li> Ensured that the network infrastructure is up and running. </li>
+			<li> Maintained the email server (euromedics.ro), updated the emails password every month, added or removed some emails if it was necessary. </li>
+			<li> Monitored and maintained updated virus protection software, and backup data for emergency recovery and installed Bitdefender up to 20 device (included mobile). </li>
+			<li> Updated every month, the server password. </li>
+			<li> Mainteined the door system (software) using ZKTeco Access System, and reported the situation of the hardware. </li>
+			<li> Mainteined the CCTY system (software) using Dahua Smart PSS. </li>
+			<li> Mainteined and checked the server utilization. </li>
+			<li> Checked every day the telephone exchange and solved small problems if it was. </li>
            </ul>		   
 		   </td>
-		  <td> <p> <a href="http://euromedics.ro"> Euromedics </a> </p>
+		  <td> <p> <a target="_blank" rel="noopener noreferrer" href="http://euromedics.ro"> Euromedics </a> </p>
 		       <p> Contact email:</p>
                <p> <b>The Computer Department's email:</b> computer@euromedics.ro  </p>
 			   <p> <b>General email:</b> office@euromedics.ro </p>
@@ -238,6 +241,41 @@
 
 </div>
 
+<div id = "contact" style = "display:none">
+<br><br><br>
+<h1 class = "align">Contact Mihalea Andreas</h1><br><br><br>
+   <form name = "form_t" method="post" action="/mail" onsubmit="verify()">
+        
+		<div class="form_left"> <label for="fname">First Name</label></div>
+		
+	    <div class ="form_right"><input type="text" id="fname" name="firstname" placeholder="Your name"></div>
+		
+		<div class="form_left"> <label for="lname">Last Name</label> </div>
+		
+		<div class ="form_right"> <input type="text" id="lname" name="lastname" placeholder="Your last name"> </div>
+		
+		<div class="form_left"> <label for="country">Country</label> </div>
+		
+		<div class ="form_right"> <input type="text" id="country" name="scountry" placeholder="Select the country"> </div>
+		
+	    <div class="form_left"> <label for="telephone">Telephone</label> </div>
+		
+		<div class ="form_right"> <input type="text" id="telephone" name="stelephone" placeholder="Write you telephone number with you country code"> </div>
+		
+		<div class="form_left"> <label for="email">Email</label> </div>
+		
+		<div class ="form_right"> <input type="text" id="email" name="semail" placeholder="Your email"> </div>
+		
+		<div class="form_left"> <label for="subject">Subject</label> </div>
+		
+		<div class ="form_right"> <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> </div>
+		
+		<input type="checkbox" id="condition" name="condition" value="true">
+        <label for="condition">I agree with the data collection (GDPR)</label><br>
+		
+		<div class ="form_right"> <input type="submit" value="Submit"> </div>
+   </form>
+</div>
 
 <div id = "about" style = "display:none">
    <br><br><br>
