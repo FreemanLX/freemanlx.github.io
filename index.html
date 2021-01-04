@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id ="html" lang="en">
 
 
 <head>
@@ -9,10 +9,9 @@
         <link rel="stylesheet" href="css.css">
 </head>
 
+<script src="script.js"> </script>
 
 <body id = "corp"> 
-
-<script src="script.js"> </script>
 
 
 <div id = "navbar_p" class = "navbar">
@@ -244,7 +243,7 @@
 <div id = "contact" style = "display:none">
 <br><br><br>
 <h1 class = "align">Contact Mihalea Andreas</h1><br><br><br>
-   <form name = "form_t" method="post" action="/mail" onsubmit="verify()">
+   <form enctype="multipart/form-data" name = "form_t" method="post" action="/post" onsubmit="return verify();">
         
 		<div class="form_left"> <label for="fname">First Name</label></div>
 		
@@ -326,7 +325,9 @@
 </body>
 
 
-
+<script type="text/javascript">
+   detect_OS_and_prepare();
+</script>
 
 
 
