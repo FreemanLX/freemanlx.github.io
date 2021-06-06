@@ -165,10 +165,7 @@ div.absolute {
 
 
 html { 
-        background: url('https://i.imgur.com/T14Nz4k.jpg') no-repeat center fixed, linear-gradient(
-          rgba(0, 0, 0, 0.7), 
-          rgba(0, 0, 0, 0.7)
-        ); 
+        background-color: #00008B;
         background-size: cover;
 }
 

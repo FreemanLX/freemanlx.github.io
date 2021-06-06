@@ -131,7 +131,7 @@ var font_t = "";
 
 function change_font_target(evt){	
 	evt.target.style.fontFamily = font_t;
-	 evt.currentTarget.style.fontFamily = font_t;
+	evt.currentTarget.style.fontFamily = font_t;
 }
 
 function font_not_installed_do(font){
