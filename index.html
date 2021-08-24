@@ -6,37 +6,50 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <title> Andreas Mihalea </title>
-        <link rel="stylesheet" href="css.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <script src="script.js"> </script>
 
-<body id = "corp"> 
+<style>
+   table{
+	  margin-left: 10px;
+	  margin-right: 10px;
+   }
+   
 
+</style>
 
-<div id = "navbar_p" class = "navbar">
-  <div class = "subnav">
-     <button class="subnavbutton" onclick="hide_home();">Home</button>
+<body id = "corp" class="bg-image" style="
+      background-image: url('260161.jpg');
+      height: 100vh;
+    "> 
+
+<div id = "navbar_p" class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#">Andreas Mihalea</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<ul class="navbar-nav mr-auto">
+  <div class = "nav-item">
+     <a class="nav-link" onclick="hide_home();">Home</a>
   </div>
   
-  <div class = "subnav">
-       <button class="subnavbutton" onclick="about();">About</button>
+  <div class = "nav-item">
+       <a class="nav-link" onclick="about();">About</a>
   </div>
-  <div class = "subnav">   
-	  <button class="subnavbutton">My CV <i class="fa fa-caret-down"></i></button>
-	   <div class = "subnav-content">
-				<div class = "subnav">        
-							<button class="subnavbutton" onclick="hide_myprojects();">Projects</button>
-				</div>
-				<div class = "subnav">
-							<button class="subnavbutton" onclick="hide_edexp();">Education</button>
-				</div>
-				<div class = "subnav">
-							<button class="subnavbutton" onclick="hide_wexp();">Work Experience</button>
-				</div>
-       </div>
-   </div>
- 
+  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          My CV
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" onclick="hide_myprojects();">Projects</a>
+          <a class="dropdown-item" onclick="hide_edexp();">Education</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" onclick="hide_wexp();">Work Experience</a>
+        </div>
+   </li>
+</ul> 
  
 </div>
 
@@ -44,29 +57,30 @@
 
 <div id="home">
 <br><br><br>
-   <h1 class="align">Welcome to the website</h1>
-<br><br><br>
-<div class="grid">
-<div class="grid_photo">
-            <h2>Contact</h2>
-			<ul class="align">
-			<li>&#9742; +40 784245722</li>
-			<li>&#128233; <a target="_blank" rel="noopener noreferrer" href="mailto:andreasmihalea@gmail.com">andreasmihalea@gmail.com</a></li>
-			<li>&#128233; <a target="_blank" rel="noopener noreferrer" href="mailto:andreas.mihalea@integrateos.com">andreas.mihalea@integrateos.com</a></li>
-			<li class = "photo"><a target="_blank" rel="noopener noreferrer" href ="https://www.linkedin.com/in/andreas-mihalea/"><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/LinkedIn_logo_In-Black.svg/1200px-LinkedIn_logo_In-Black.svg.png" alt = "linkedin" height = "50" width = "50" /></a>&nbsp; &nbsp; <a href = "https://facebook.com/andreas.mihalea.16"><img src="https://i.imgur.com/K6gCTYH.png" alt="fb" height = "50" width = "50"/></a>&nbsp; &nbsp; <a href = "https://github.com/FreemanLX"> <img src = "https://i.imgur.com/ep2fqSD.png" alt = "github" height = "50" width ="50"/></a></li> 
-			</ul>
+<div class="container">
+<div class="row">
+<div class="col-sm">
+            <p><h4>Contact</h4></p>
+			<p>&#9742; +40 784245722</p>
+			<p>&#128233; <a target="_blank" rel="noopener noreferrer" href="mailto:andreasmihalea@gmail.com">andreasmihalea@gmail.com</a></p>
+			<p>&#128233; <a target="_blank" rel="noopener noreferrer" href="mailto:andreas.mihalea@integrateos.com">andreas.mihalea@integrateos.com</a></p>
+			<p><a target="_blank" rel="noopener noreferrer" href ="https://www.linkedin.com/in/andreas-mihalea/">
+			<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/LinkedIn_logo_In-Black.svg/1200px-LinkedIn_logo_In-Black.svg.png" alt = "linkedin" height = "50" width = "50" />
+			</a>&nbsp; &nbsp; 
+			<a href = "https://facebook.com/andreas.mihalea.16"><img src="https://i.imgur.com/K6gCTYH.png" alt="fb" height = "50" width = "50"/></a>&nbsp; &nbsp; 
+			<a href = "https://github.com/FreemanLX"> <img src = "https://i.imgur.com/ep2fqSD.png" alt = "github" height = "50" width ="50"/></a></p> 
 			<br>
 </div>
 
-<div class = "grid_about">
-	        <h2>General infomations</h2>
-			<ul class="align">
-			<li><b>Name:</b> Mihalea Andreas</li>
-			<li><b>Date of Birth:</b> 16.10.1999</li>
-			<li><b>Address:</b> Sperantei Street, 32 – 34, Bragadiru (Romania)</li>
-			<li><b>Status:</b> Student and IT Specialist</li>
-			</ul>
+<div class = "col-sm">
+	        <p><h4>General infomations</h4></p>
+			<p><b>Name:</b> Mihalea Andreas</p>
+			<p><b>Date of Birth:</b> 16.10.1999</p>
+			<p><b>Address:</b> Sperantei Street, 32 – 34, Bragadiru (Romania)</p>
+			<p><b>Status:</b> Student and IT Specialist</p>
 			<br><br>
+</div>
+</div>
 </div>
 
 
@@ -77,43 +91,39 @@
 
 <div id = "projects" style="display:none">
     <br><br><br>
-    <h1 class = 'align'>Here you will see my projects during the time</h1><br><br><br>
-    <table class ="talign">
+    <h3 align = 'center'>Here you will see my projects during the time</h3><br><br><br>
+    <table class ="table table-striped table-bordered">
+	  <thead class="thead-dark">
        <tr>
-	      <th> Projects </th>
+	      <th> Project name </th>
+		  <th> Description </th>
 		  <th> Link </th>
         </tr>
+	  </thead>	
 		<tr>
 		  <td> 
-		   <h3>IntegrateOS</h3>
+		   IntegrateOS
+		   </td>
+		  <td>
 		   <p>Description: A method to install every OS on every computer</p>
            <p>The idea: I want to install any OS in every computer (including Raspberry PI)</p>
-		   </td>
+          </td>		   
 		  <td> <a target="_blank" rel="noopener noreferrer" href="http://github.com/FreemanLX/IntegrateOS"> <img src = "https://i.imgur.com/ep2fqSD.png" alt = "integrateos" height = "50" width ="50"/> </a> </td>
-		</tr>
-		<tr>
-		   <td>
-		   <h3>CloudOS</h3>
-			   <p>Description: A method to import files and save them in the cloud using IIS 10</p>
-		           <p>Requirements: You need to run it on Windows Server</p> 
-		   </td>
-		   <td><a target="_blank" rel="noopener noreferrer" href="http://github.com/FreemanLX/CloudOS"> <img src = "https://i.imgur.com/ep2fqSD.png" alt = "cloudos" height = "50" width ="50"/> </a> </td>
 		</tr>
        <tr>
 		   <td>
-		   <h3>Launcher San Andreas Multiplayer</h3>
-		   <p>Description: A new launcher for GTA San Andreas Multiplayer. </p>
+		   Launcher San Andreas Multiplayer
 		   </td>
+		   <td><p>Description: A new launcher for GTA San Andreas Multiplayer. </p></td>
 		   <td><a target="_blank" rel="noopener noreferrer" href="http://github.com/FreemanLX/NeoSAMP"> <img src = "https://i.imgur.com/ep2fqSD.png" alt = "neosamp" height = "50" width ="50"/> </a> </td>
 		</tr>
 	    <tr>
+		   <td>Software for Windows PE</td>
 		   <td>
-		   <h3>Matlab school projects</h3>
-		   <p>Description: School projects programmed in matlab.</p>
+		   <p>Description: A desktop mode for Windows PE</p>
 		   <p>Requirements: You need to run on Windows 7+</p> 
 		   </td>
-		   <td><p><a target="_blank" rel="noopener noreferrer" href="https://github.com/FreemanLX/Rezolvare-analiza"> <img src = "https://i.imgur.com/ep2fqSD.png" alt = "rezolvarea" height = "50" width ="50"/> </a></p> 
-		       <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/FreemanLX/MATLAB-Projects-2018-2019"> <img src = "https://i.imgur.com/ep2fqSD.png" alt = "matlab" height = "50" width ="50"/> </a></p>
+		   <td><p><a target="_blank" rel="noopener noreferrer" href="https://github.com/FreemanLX/WindowsPE"> <img src = "https://i.imgur.com/ep2fqSD.png" alt = "rezolvarea" height = "50" width ="50"/> </a></p> 
 		   </td>
 		</tr>
     </table>    
@@ -125,15 +135,17 @@
 </div>
 
 <div id = "education" style="display:none">
-      <br><br><br>
-    <h1 class = "align">Here you will see my education history</h1><br><br><br>
-    <table class ="talign">
+    <br><br><br>
+    <h3 align = "center">Here you will see my education history</h3><br><br><br>
+    <table class ="table table-striped table-bordered">
+	    <thead class="thead-dark">
        <tr>
 	      <th> School name </th>
 		  <th> Profile </th>
 		  <th> Period </th>
 		  <th> Score </th>
         </tr>
+		</thead>
 		<tr>
 		   <td> University of Bucharest</td>
            <td>(MSC) Security and Applied Logic</td>
@@ -158,13 +170,15 @@
 	<br>
 	<br>
 	<br>
-    <table class ="talign">
+    <table class ="table table-striped table-bordered">
+	        <thead class="thead-dark">
 			<tr>
 			  <th> Certificate name </th>
 			  <th> Type </th>
 			  <th> Period </th>
 			  <th> Score </th>
 			</tr>
+			</thead>
 		     <tr>
 			   <td>Volunteer Appreciation Certificate</td>
 			   <td>Volunteer</td>
@@ -198,36 +212,40 @@
 
 <div id = "work" style="display:none">
 <br><br><br>
-<h1 class = "align">Here you will see my work history</h1><br><br><br>
-<table class ="talign">
-    <tr>
-	      <th>Work Experience</th>
-        </tr>
+<h3 align = "center">Here you will see my work history</h3><br><br><br>
+<table class ="table table-striped table-bordered">
+        <thead class="thead-dark">
 		<tr>
-		   <td>
-				<ul class = "align">
-					<h3> IT Onsite Support Analyst</h3>
-					<p><b> Schlumberger </b></p>
-					<p><b> August 2021 - Current </b></p>
-			   </ul>
-		   </td>
+			<th>Position</th>
+			<th>Company</th>
+			<th>Period</th>
+			<th>Description</th>
+        </tr>
+		</thead>
+		<tr>
+		   <td> IT Onsite Support Analyst </td>
+		   <td> Schlumberger </td>
+		   <td> August 2021 - Current </td>
+		   <td> - </td>
 		</tr>   
 		<tr>
 		  <td> 
-			   <ul class = "align">
-				<h3>Junior System Administrator</h3>
-					<p><b>Euromedics Cyro / Bank</b></p>
-					<p><b>July 2020 - October 2020</b></p>
-					<li>&nbsp&nbsp&nbsp&nbspInstalled and configured new hardware and software to some computers. </li>
-					<li>&nbsp&nbsp&nbsp&nbspAnswered technical queries and assisted users. </li>
-					<li>&nbsp&nbsp&nbsp&nbspEnsured that the network infrastructure is up and running. </li>
-					<li>&nbsp&nbsp&nbsp&nbspMaintained the email server (euromedics.ro), updated the emails password every month, added or removed some emails if it was necessary. </li>
-					<li>&nbsp&nbsp&nbsp&nbspMonitored and maintained updated virus protection software, and backup data for emergency recovery and installed Bitdefender up to 20 device (included mobile). </li>
-					<li>&nbsp&nbsp&nbsp&nbspUpdated every month, the server password. </li>
-					<li>&nbsp&nbsp&nbsp&nbspMainteined the door system (software) using ZKTeco Access System, and reported the situation of the hardware. </li>
-					<li>&nbsp&nbsp&nbsp&nbspMainteined the CCTY system (software) using Dahua Smart PSS. </li>
-					<li>&nbsp&nbsp&nbsp&nbspMainteined and checked the server utilization. </li>
-					<li>&nbsp&nbsp&nbsp&nbspChecked every day the telephone exchange and solved small problems if it was. </li>
+				Junior System Administrator
+		  </td>
+          <td> Euromedics Cyro / Bank </td>
+          <td> July 2020 - October 2020 </td>
+          <td>
+                 <ul>		  
+					<li>Installed and configured new hardware and software to some computers. </li>
+					<li>Answered technical queries and assisted users. </li>
+					<li>Ensured that the network infrastructure is up and running. </li>
+					<li>Maintained the email server (euromedics.ro), updated the emails password every month, added or removed some emails if it was necessary. </li>
+					<li>Monitored and maintained updated virus protection software, and backup data for emergency recovery. </li>
+					<li>Updated every month, the server password. </li>
+					<li>Mainteined the door system (software) using ZKTeco Access System, and reported the situation of the hardware. </li>
+					<li>Mainteined the CCTV system (software) using Dahua Smart PSS. </li>
+					<li>Mainteined and checked the server utilization. </li>
+					<li>Checked every day the telephone exchange and solved small problems if it was. </li>
 			   </ul>		   
 		   </td>
 		</tr>
@@ -239,46 +257,18 @@
 </div>
 
 <div id = "contact" style = "display:none">
-<br><br><br>
-<h1 class = "align">Contact Mihalea Andreas</h1><br><br><br>
-   <form enctype="multipart/form-data" name = "form_t" method="post" action="/post" onsubmit="return verify();">
-        
-		<div class="form_left"> <label for="fname">First Name</label></div>
-		
-	    <div class ="form_right"><input type="text" id="fname" name="firstname" placeholder="Your name"></div>
-		
-		<div class="form_left"> <label for="lname">Last Name</label> </div>
-		
-		<div class ="form_right"> <input type="text" id="lname" name="lastname" placeholder="Your last name"> </div>
-		
-	    <div class="form_left"> <label for="telephone">Telephone</label> </div>
-		
-		<div class ="form_right"> <input type="text" id="telephone" name="stelephone" placeholder="Write you telephone number with you country code"> </div>
-		
-		<div class="form_left"> <label for="email">Email</label> </div>
-		
-		<div class ="form_right"> <input type="text" id="email" name="semail" placeholder="Your email"> </div>
-		
-		<div class="form_left"> <label for="subject">Subject</label> </div>
-		
-		<div class ="form_right"> <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> </div>
-		
-		<input type="checkbox" id="condition" name="condition" value="true">
-        <label for="condition">I agree with the data collection (GDPR)</label><br>
-		
-		<div class ="form_right"> <input type="submit" value="Submit"> </div>
-   </form>
+
 </div>
 
 <div id = "about" style = "display:none">
    <br><br><br>
-   <h1 class = "align">About Andreas</h1>
+   <h3 align = "center">About Andreas</h3>
    <br><br><br>
    
-<table class ="talign"> 
+<table> 
     <tr>
 	      <td> 
-		       <ul class="align">
+		       <ul>
 				   <li>I'm a computer enthusiast who wants to learn all new kinds of technology, from programming to technical and operating systems. </li>
 				   <li>I have knowledge in programming such as: C++, C#, C, MATLAB, Batch (Windows) and Bash.</li>
 				   <li>As well as, in operating systems, programs, and in hardware, especially in large computers and laptops.</li>
@@ -289,20 +279,19 @@
 </table>
   
  <br><br><br>
- <h1 class="align">About this website</h1>
+ <h3 align="center">About this website</h3>
  <br><br><br>
    
-<table class ="talign">
+<table>
     <tr>
 	      <td> 
-		       <ul class = "align">
-		       <li>This website was build in 8 hours, from scratch using notepad++ and imgur for pictures.</li>
+		       <ul>
+		       <li>This website was built in 8 hours, from scratch by using html, css (bootstrap) and javascript</li>
 		       <li><b>All the icons putted in this site, were used for a school project or knowledge about Andreas and his history. All rights reserved for those who made it.</b></li>
 			   <li><b class="type">My thanks to: </b> StackOverflow <b> and </b> W3Schools <b> for providing quality solutions in realization of this website.</b></li>
 			   </ul>
 			   <br>
 			   <br>
-			   <p><b>(C) Andreas Mihalea. All Rights reserved</b></p>
 		  </td>
     </tr>	
 
@@ -311,8 +300,8 @@
 </div>
 
 
-<div id = "data" class = "absolute">
-         <h3 id="date"></h3>
+<div id = "data" class="fixed-bottom" align = "center">
+         <h5 id="date"></h5>
 		 <script> update() </script>
 </div>
 
@@ -323,6 +312,9 @@
    detect_OS_and_prepare();
 </script>
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 </html>

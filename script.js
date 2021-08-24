@@ -102,9 +102,6 @@ function hide_myprojects(){
 	    moving_to("projects");
 }
 
-function contact_form(){
-	    moving_to("contact");
-}
 
 function listen(s){
 	   if(s.matches){
